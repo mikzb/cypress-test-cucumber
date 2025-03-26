@@ -1,0 +1,17 @@
+{
+  "name": "cypress-test-simple",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "test": "cypress run spec",
+    "cypress:open": "cypress open"
+ },
+ "devDependencies": {
+  "@badeball/cypress-cucumber-preprocessor": "22.0.1",
+  "@bahmutov/cypress-esbuild-preprocessor": "2.2.4",
+  "cypress": "14.2.0"  
+ }
+}
