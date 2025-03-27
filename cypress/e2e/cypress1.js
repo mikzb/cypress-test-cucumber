@@ -25,7 +25,7 @@ describe('Gestión de tareas con POM', () => {
         todoPage.addTodo(taskName);
     });
 
-    Then("I should see the {string} task", (taskName) => {
+    Then("I should see {string} task", (taskName) => {
         todoPage.validateTodoExists(taskName);
     });
 /*
@@ -40,7 +40,7 @@ describe('Gestión de tareas con POM', () => {
         todoPage.deleteTodo(taskName);
     });
 
-    Then("I should not see the {string} task", (taskName) => {
+    Then("I should not see {string} task", (taskName) => {
         todoPage.elements.todoItems().should('not.exist');
     });
 /*
@@ -51,11 +51,11 @@ describe('Gestión de tareas con POM', () => {
     todoPage.elements.todoItem(taskName).should('have.class', 'completed');
   });
 */
-    When("I mark {string} task as completed", (taskName) => {
+    When("I mark {string} as completed", (taskName) => {
         todoPage.toggleTodo(taskName);
     });
 
-    Then("I should see the {string} task as completed", (taskName) => {
+    Then("I should see the {string} as completed", (taskName) => {
         todoPage.elements.todoItem(taskName).should('have.class', 'completed');
     });
 /*
@@ -67,11 +67,11 @@ describe('Gestión de tareas con POM', () => {
     todoPage.elements.todoItem(taskName).should('not.have.class', 'completed');
   });
   */
-    When("I mark {string} task as incomplete", (taskName) => {
+    When("I mark {string} as incomplete", (taskName) => {
         todoPage.toggleTodo(taskName);
     });
 
-    Then("I should see the {string} task as incomplete", (taskName) => {
+    Then("I should see {string} as incomplete", (taskName) => {
         todoPage.elements.todoItem(taskName).should('not.have.class', 'completed');
     });
 

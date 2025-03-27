@@ -15,12 +15,11 @@ Feature: Gestion de tareas
         Given I open the todo page
         When I add "Tarea3" task
         And I mark "Tarea3" as completed
-        I should see the "Tarea3" as completed
+        Then I should see the "Tarea3" as completed
 
     Scenario: Agregar una tarea, marcarla y desmarcarla
         Given I open the todo page
         When I add "Tarea4" task
         And I mark "Tarea4" as completed
         And I mark "Tarea4" as incomplete
-        I should see "Tarea4" as incomplete
-    
+        Then I should see "Tarea4" as incomplete
